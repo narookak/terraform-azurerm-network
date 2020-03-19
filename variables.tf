@@ -32,6 +32,10 @@ variable "subnet_names" {
   description = "A list of public subnets inside the vNet."
   default     = ["subnet1"]
 }
+variable "service_endpoints"{
+  description = "The list of Service endpoints to associate with the subnet."
+  default     = ["Microsoft.AzureActiveDirectory", "Microsoft.KeyVault", "Microsoft.Storage"]
+}
 
 variable "tags" {
   description = "The tags to associate with your network and subnets."
